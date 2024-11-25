@@ -1,0 +1,22 @@
+sentence = input("Enter a sentance ")
+sen2=sentence[::-1]
+rng=len(sentence)
+print(rng)
+i=0
+j=0
+#sentence_cleaned = ''.join(c for c in sentence if c.isalnum()).lower()
+found=True
+while i!=len(sen2)or j!=len(sentence):
+    if sen2[i]==" "or sen2[i]==",":
+        i=i+1
+        continue
+    if sentence[j]==" "or sentence[j]==",":
+        j=j+1   
+        continue
+        
+    if sen2[i].lower()!=sentence[j].lower():
+        found=False
+        break
+    i=i+1
+    j=j+1
+print(f"done {found}")
